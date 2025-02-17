@@ -14,6 +14,8 @@ const initialState: TaskListInterface = {
   error: null,
 };
 
+// COMMENT: Que el endpoint quede en una constante e igual agregar error handling.
+
 // Async Thunks for fetching and modifying tasks
 export const fetchTasks = createAsyncThunk('tasks/fetchTasks', async () => {
   const response = await axios.get('http://localhost:8080/api/tasks');
@@ -41,6 +43,7 @@ export const toggleTaskStatus = createAsyncThunk('tasks/toggleTaskStatus', async
 });
 
 // Slice, encapsulating all the actions
+// COMMENT: Aquí hay mucho código que se repite, sería cuestión de ver como puede hacerse una especie de función general con callback y que los cases fueran más sencillos
 const TaskSlice = createSlice({
   name: 'tasks',
   initialState,

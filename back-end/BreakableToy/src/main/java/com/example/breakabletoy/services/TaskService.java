@@ -41,6 +41,7 @@ public class TaskService {
         return tasks;
     }
 
+    // COMMENT: Aquí podrías usar algún tipo de mapping para no tener que estar repitiendo los sets y gets (tómalo como prioridad baja, porque podría llegar a complicarse)
     public void updateTask(Task updatedTask) {
         Task existingTask = getTask(updatedTask.getId());
         if (existingTask != null) {
@@ -76,6 +77,7 @@ public class TaskService {
         }
     }
 
+    // COMMENT: esta función podría mejorar... Más que nada que sea más fácil de entenderse o de seguir
     public List<Task> filterTasks(String searchText, String dueDate, String status, String priority) {
         return tasks.stream()
                 .filter(task -> {

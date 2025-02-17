@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 
+// COMMENT: Hay que terminar de implementar ésto, e igual separarlo por componentes, quizás implementarlo usando context
 export default class StatsTab extends Component {
   render() {
     return (

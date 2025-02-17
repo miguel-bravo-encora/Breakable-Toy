@@ -20,6 +20,7 @@ public class Task {
     private LocalDateTime finishDate;
     private LocalDateTime createdDate;
 
+    // COMMENT: Podrías cambiar ésto para que acepte valores por defecto o algún tipo de validación
     public int getId(){return this.id;}
     public void setId(int id){this.id = id;}
     public String getDescription(){return this.description;}
@@ -47,6 +48,7 @@ public class Task {
         }
     }
 
+    //COMMENT: Definitivamente hacer un constructor más completo
     public Task(){
     }
 }

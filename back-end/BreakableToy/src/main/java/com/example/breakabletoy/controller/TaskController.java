@@ -9,6 +9,9 @@ import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
+// COMMENT: Aquí en general sería cuestión de agregar algun tipo de error handling, 
+// preferiblemente algo que puedas poner de forma global y luego especificar para cada request
+
 @RestController
 @RequestMapping("/api/tasks")
 public class TaskController {
@@ -30,6 +33,7 @@ public class TaskController {
         return new ResponseEntity<>(taskService.getAllTasks(), HttpStatus.OK);
     }
 
+    // COMMENT: Ésto definitivamente se puede mejorar...
     @GetMapping("/{taskId}")
     public ResponseEntity<Task> getTask(@PathVariable int taskId) {
         Task task = taskService.getTask(taskId);

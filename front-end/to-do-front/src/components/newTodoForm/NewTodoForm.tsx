@@ -48,6 +48,8 @@ export function NewTodoForm(props : ModalProps){
         }
     }
 
+    // COMMENT: Intenta separar ésto por componentes individuales
+
     return (
         <Modal
             show={props.show}
